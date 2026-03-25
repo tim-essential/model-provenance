@@ -149,7 +149,22 @@ tests/
 ```
 
 
-## Quickstart
+## Deploy
+
+Hosted on Streamlit Community Cloud.  To deploy your own:
+
+1. Fork or push to a public GitHub repo
+2. Go to https://share.streamlit.io
+3. Sign in with GitHub
+4. Select repo, branch `main`, entry point:
+   `src/model_provenance/presentation/streamlit_app/app.py`
+5. Deploy
+
+The `requirements.txt` and `.streamlit/config.toml` are
+already configured for Streamlit Cloud.
+
+
+## Quickstart (local)
 
 ```fish
 uv sync
