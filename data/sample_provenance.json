@@ -1,0 +1,568 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000001",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "scheduler": "cosine"
+      },
+      "training_state": {
+        "step": 0,
+        "tokens_seen": 0,
+        "lr_current": 0.0,
+        "loss_current": null,
+        "summary": "fresh init, kaiming_normal"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000002",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "scheduler": "cosine"
+      },
+      "training_state": {
+        "step": 1,
+        "tokens_seen": 1048576,
+        "lr_current": 0.00015,
+        "loss_current": 8.42,
+        "summary": "post first optimizer step"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000003",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "scheduler": "cosine"
+      },
+      "training_state": {
+        "step": 2,
+        "tokens_seen": 2097152,
+        "lr_current": 0.000225,
+        "loss_current": 6.18,
+        "summary": "warmup phase"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000004",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "scheduler": "cosine"
+      },
+      "training_state": {
+        "step": 3,
+        "tokens_seen": 3145728,
+        "lr_current": 0.0003,
+        "loss_current": 4.91,
+        "summary": "pretrain step 3, branch point"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000005",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "scheduler": "cosine"
+      },
+      "training_state": {
+        "step": 4,
+        "tokens_seen": 4194304,
+        "lr_current": 0.000285,
+        "loss_current": 4.12,
+        "summary": "mainline pretrain continues"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000006",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "scheduler": "cosine"
+      },
+      "training_state": {
+        "step": 5,
+        "tokens_seen": 5242880,
+        "lr_current": 0.00027,
+        "loss_current": 3.64,
+        "summary": "pretrain final step in this run"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000007",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.00001,
+        "scheduler": "linear_warmup_cosine",
+        "warmup_steps": 100
+      },
+      "training_state": {
+        "step": 1,
+        "tokens_seen": 65536,
+        "lr_current": 0.000002,
+        "loss_current": 2.05,
+        "summary": "finetune-run-1 first step"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000008",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.00001,
+        "scheduler": "linear_warmup_cosine",
+        "warmup_steps": 100
+      },
+      "training_state": {
+        "step": 2,
+        "tokens_seen": 131072,
+        "lr_current": 0.000006,
+        "loss_current": 1.72,
+        "summary": "finetune-run-1 mid"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000009",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.00001,
+        "scheduler": "linear_warmup_cosine",
+        "warmup_steps": 100
+      },
+      "training_state": {
+        "step": 3,
+        "tokens_seen": 196608,
+        "lr_current": 0.00001,
+        "loss_current": 1.48,
+        "summary": "finetune-run-1 final step"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000010",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.00001,
+        "scheduler": "constant",
+        "weight_decay": 0.01
+      },
+      "training_state": {
+        "step": 1,
+        "tokens_seen": 65536,
+        "lr_current": 0.00001,
+        "loss_current": 1.88,
+        "summary": "finetune-run-2 first step"
+      }
+    },
+    {
+      "artifact_id": "00000000-0000-0000-0000-000000000011",
+      "specification": {
+        "arch": "transformer",
+        "layers": 24,
+        "hidden_dim": 1024,
+        "heads": 16,
+        "vocab_size": 32000,
+        "optimizer": "adamw",
+        "lr": 0.00001,
+        "scheduler": "constant",
+        "weight_decay": 0.01
+      },
+      "training_state": {
+        "step": 2,
+        "tokens_seen": 131072,
+        "lr_current": 0.00001,
+        "loss_current": 1.55,
+        "summary": "finetune-run-2 final step"
+      }
+    }
+  ],
+  "derivations": [
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000001",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000001",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000002",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "pile",
+        "split": "train",
+        "batch_size": 512,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000002",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000002",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000003",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "pile",
+        "split": "train",
+        "batch_size": 512,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000003",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000003",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000004",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "pile",
+        "split": "train",
+        "batch_size": 512,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000004",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000004",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000005",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "pile",
+        "split": "train",
+        "batch_size": 512,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000005",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000005",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000006",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "pile",
+        "split": "train",
+        "batch_size": 512,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000006",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000004",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000007",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "dolly-15k",
+        "split": "train",
+        "batch_size": 32,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000007",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000007",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000008",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "dolly-15k",
+        "split": "train",
+        "batch_size": 32,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000008",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000008",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000009",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "dolly-15k",
+        "split": "train",
+        "batch_size": 32,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000009",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000004",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000010",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "oasst1",
+        "split": "train",
+        "batch_size": 32,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    },
+    {
+      "derivation_id": "11111111-1111-1111-1111-000000000010",
+      "parent_artifact_id": "00000000-0000-0000-0000-000000000010",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000011",
+      "update_definition": {
+        "algorithm": "adamw",
+        "loss": "cross_entropy",
+        "gradient_clip": 1.0,
+        "weight_decay": 0.1
+      },
+      "training_input_descriptor": {
+        "dataset": "oasst1",
+        "split": "train",
+        "batch_size": 32,
+        "seq_length": 2048
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    }
+  ],
+  "initializations": [
+    {
+      "initialization_id": "22222222-2222-2222-2222-000000000001",
+      "child_artifact_id": "00000000-0000-0000-0000-000000000001",
+      "initialization_rule": {
+        "method": "kaiming_normal",
+        "mode": "fan_in",
+        "nonlinearity": "relu",
+        "seed": 42
+      },
+      "execution_record": {
+        "code_rev": "abc123",
+        "hardware": "8xA100-80GB",
+        "precision": "bf16",
+        "framework": "jax",
+        "seed": 42
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "checkpoint_id": "33333333-3333-3333-3333-000000000001",
+      "artifact_id": "00000000-0000-0000-0000-000000000004",
+      "created_at": "2025-01-15T08:00:00+00:00",
+      "handle": "gs://model-provenance-demo/checkpoints/pretrain-run-1/step-000003.ckpt"
+    },
+    {
+      "checkpoint_id": "33333333-3333-3333-3333-000000000002",
+      "artifact_id": "00000000-0000-0000-0000-000000000006",
+      "created_at": "2025-01-15T12:00:00+00:00",
+      "handle": "gs://model-provenance-demo/checkpoints/pretrain-run-1/step-000005-final.ckpt"
+    },
+    {
+      "checkpoint_id": "33333333-3333-3333-3333-000000000003",
+      "artifact_id": "00000000-0000-0000-0000-000000000009",
+      "created_at": "2025-01-16T10:00:00+00:00",
+      "handle": "gs://model-provenance-demo/checkpoints/finetune-run-1/final.ckpt"
+    },
+    {
+      "checkpoint_id": "33333333-3333-3333-3333-000000000004",
+      "artifact_id": "00000000-0000-0000-0000-000000000011",
+      "created_at": "2025-01-16T14:30:00+00:00",
+      "handle": "gs://model-provenance-demo/checkpoints/finetune-run-2/final.ckpt"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "44444444-4444-4444-4444-000000000001",
+      "name": "pretrain-run-1",
+      "starting_artifact_id": "00000000-0000-0000-0000-000000000001",
+      "derivation_ids": [
+        "11111111-1111-1111-1111-000000000001",
+        "11111111-1111-1111-1111-000000000002",
+        "11111111-1111-1111-1111-000000000003",
+        "11111111-1111-1111-1111-000000000004",
+        "11111111-1111-1111-1111-000000000005"
+      ],
+      "artifact_ids": [
+        "00000000-0000-0000-0000-000000000001",
+        "00000000-0000-0000-0000-000000000002",
+        "00000000-0000-0000-0000-000000000003",
+        "00000000-0000-0000-0000-000000000004",
+        "00000000-0000-0000-0000-000000000005",
+        "00000000-0000-0000-0000-000000000006"
+      ]
+    },
+    {
+      "run_id": "44444444-4444-4444-4444-000000000002",
+      "name": "finetune-run-1",
+      "starting_artifact_id": "00000000-0000-0000-0000-000000000004",
+      "derivation_ids": [
+        "11111111-1111-1111-1111-000000000006",
+        "11111111-1111-1111-1111-000000000007",
+        "11111111-1111-1111-1111-000000000008"
+      ],
+      "artifact_ids": [
+        "00000000-0000-0000-0000-000000000004",
+        "00000000-0000-0000-0000-000000000007",
+        "00000000-0000-0000-0000-000000000008",
+        "00000000-0000-0000-0000-000000000009"
+      ]
+    },
+    {
+      "run_id": "44444444-4444-4444-4444-000000000003",
+      "name": "finetune-run-2",
+      "starting_artifact_id": "00000000-0000-0000-0000-000000000004",
+      "derivation_ids": [
+        "11111111-1111-1111-1111-000000000009",
+        "11111111-1111-1111-1111-000000000010"
+      ],
+      "artifact_ids": [
+        "00000000-0000-0000-0000-000000000004",
+        "00000000-0000-0000-0000-000000000010",
+        "00000000-0000-0000-0000-000000000011"
+      ]
+    }
+  ]
+}
